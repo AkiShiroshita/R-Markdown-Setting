@@ -1,0 +1,25 @@
+---
+title: "R markdown PDF出力の日本語対応"
+author: "城下　彰宏"
+date: "`r format(Sys.time(), '%Y/%m/%d')`"
+output:
+  pdf_document: 
+    latex_engine: xelatex 
+    number_sections: true
+documentclass: bxjsarticle
+header-includes: 
+  - \usepackage{zxjatype} 
+  - \usepackage[ipa]{zxjafont} 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE,
+  dev = "cairo_pdf",
+  dev.args = list(family = "ipaexg"),
+  out.width = ".8\\linewidth"
+)
+```
+
+## R Markdown
+城下彰宏のドキュメント　　
+日本語出力のためのテンプレート
